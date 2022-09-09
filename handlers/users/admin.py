@@ -30,7 +30,7 @@ async def send_ad_to_all(message: types.Message):
     users = db.select_all_users()
     for user in users:
         user_id = user[0]
-        await bot.send_message(chat_id=user_id, text="@BekoDev kanaliga obuna bo'ling!")
+        await bot.send_message(chat_id=user_id, text="Bot serverga joylanyapdi shuning un botimiz 5-10 daqiqaga o'chadi!")
         await asyncio.sleep(0.05)
 
 @dp.message_handler(text="/cleandb", user_id=ADMINS)

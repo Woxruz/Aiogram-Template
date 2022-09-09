@@ -12,7 +12,7 @@ async def bot_start(message: types.Message):
     name = message.from_user.full_name
     # Foydalanuvchini bazaga qo'shamiz
     try:
-        db.add_user(id=message.from_user.username,
+        db.add_user(id=message.from_user.id,
                     name=name)
         await message.answer(f"Xush kelibsiz! {name}\n\n<b>Urganch tumani 35-son maktabning atrofini (Beton) devor bilan o'rash</b> uchun ovoz berasizmi?",reply_markup=menu1)
         # Adminga xabar beramiz
